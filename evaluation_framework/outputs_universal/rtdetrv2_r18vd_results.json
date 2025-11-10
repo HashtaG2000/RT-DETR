@@ -1,0 +1,768 @@
+{
+  "model": {
+    "name": "rtdetrv2_r18vd",
+    "path": "../pretrained_weights/rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+    "architecture": "rtdetr",
+    "source": "rtdetr_yaml",
+    "parameters_M": 20.184464
+  },
+  "dataset": {
+    "format": "coco",
+    "annotation_file": "dataset/coco/annotations/instances_val2017.json",
+    "image_dir": "dataset/coco/val2017",
+    "num_images": 5000,
+    "num_categories": 80
+  },
+  "configuration": {
+    "conf_threshold": 0.3,
+    "iou_threshold": 0.5,
+    "input_size": 640,
+    "device": "cuda"
+  },
+  "metrics": {
+    "coco": {
+      "AP": 0.0623833069034238,
+      "AP50": 0.08677140099394173,
+      "AP75": 0.06651433469043457,
+      "AP_small": 0.03953711682967068,
+      "AP_medium": 0.06139908500499334,
+      "AP_large": 0.09030273715891342,
+      "AR": 0.0474981085247791,
+      "AR_small": 0.05592702894452529,
+      "AR_medium": 0.08225998270811641,
+      "AR_large": 0.1085029880464851
+    },
+    "voc": {
+      "mAP": 0.06469687415166252,
+      "class_metrics": {
+        "1": {
+          "ap": 0.6066258298480924,
+          "num_predictions": 20475,
+          "num_ground_truths": 11004
+        },
+        "2": {
+          "ap": 0.25690663692761784,
+          "num_predictions": 385,
+          "num_ground_truths": 316
+        },
+        "3": {
+          "ap": 0.3640721856635266,
+          "num_predictions": 3950,
+          "num_ground_truths": 1932
+        },
+        "4": {
+          "ap": 0.41694484914292107,
+          "num_predictions": 789,
+          "num_ground_truths": 371
+        },
+        "5": {
+          "ap": 0.3984662169037131,
+          "num_predictions": 236,
+          "num_ground_truths": 143
+        },
+        "6": {
+          "ap": 0.5162793929169249,
+          "num_predictions": 424,
+          "num_ground_truths": 285
+        },
+        "7": {
+          "ap": 0.4211819421042864,
+          "num_predictions": 300,
+          "num_ground_truths": 190
+        },
+        "8": {
+          "ap": 0.264340926106173,
+          "num_predictions": 1287,
+          "num_ground_truths": 415
+        },
+        "9": {
+          "ap": 0.24867768264136705,
+          "num_predictions": 1000,
+          "num_ground_truths": 430
+        },
+        "10": {
+          "ap": 0.41753156650024237,
+          "num_predictions": 2145,
+          "num_ground_truths": 637
+        },
+        "11": {
+          "ap": 0.6294945643532708,
+          "num_predictions": 133,
+          "num_ground_truths": 101
+        },
+        "13": {
+          "ap": 0.0,
+          "num_predictions": 75,
+          "num_ground_truths": 75
+        },
+        "14": {
+          "ap": 0.0,
+          "num_predictions": 531,
+          "num_ground_truths": 60
+        },
+        "15": {
+          "ap": 0.0,
+          "num_predictions": 1002,
+          "num_ground_truths": 413
+        },
+        "16": {
+          "ap": 0.0,
+          "num_predictions": 332,
+          "num_ground_truths": 440
+        },
+        "17": {
+          "ap": 0.002457002447515961,
+          "num_predictions": 391,
+          "num_ground_truths": 202
+        },
+        "18": {
+          "ap": 0.0,
+          "num_predictions": 342,
+          "num_ground_truths": 218
+        },
+        "19": {
+          "ap": 0.0036855036689023178,
+          "num_predictions": 654,
+          "num_ground_truths": 273
+        },
+        "20": {
+          "ap": 0.005027230810515484,
+          "num_predictions": 829,
+          "num_ground_truths": 361
+        },
+        "21": {
+          "ap": 0.0,
+          "num_predictions": 405,
+          "num_ground_truths": 380
+        },
+        "22": {
+          "ap": 0.0,
+          "num_predictions": 82,
+          "num_ground_truths": 255
+        },
+        "23": {
+          "ap": 0.0,
+          "num_predictions": 406,
+          "num_ground_truths": 71
+        },
+        "24": {
+          "ap": 0.0,
+          "num_predictions": 327,
+          "num_ground_truths": 268
+        },
+        "25": {
+          "ap": 0.0,
+          "num_predictions": 865,
+          "num_ground_truths": 232
+        },
+        "27": {
+          "ap": 0.005681818149535125,
+          "num_predictions": 796,
+          "num_ground_truths": 371
+        },
+        "28": {
+          "ap": 0.0,
+          "num_predictions": 575,
+          "num_ground_truths": 413
+        },
+        "31": {
+          "ap": 0.0,
+          "num_predictions": 556,
+          "num_ground_truths": 540
+        },
+        "32": {
+          "ap": 0.0,
+          "num_predictions": 132,
+          "num_ground_truths": 254
+        },
+        "33": {
+          "ap": 0.0,
+          "num_predictions": 527,
+          "num_ground_truths": 303
+        },
+        "34": {
+          "ap": 0.0,
+          "num_predictions": 689,
+          "num_ground_truths": 115
+        },
+        "35": {
+          "ap": 0.0,
+          "num_predictions": 246,
+          "num_ground_truths": 241
+        },
+        "36": {
+          "ap": 0.0,
+          "num_predictions": 260,
+          "num_ground_truths": 69
+        },
+        "37": {
+          "ap": 0.0,
+          "num_predictions": 337,
+          "num_ground_truths": 263
+        },
+        "38": {
+          "ap": 0.0019342359685583768,
+          "num_predictions": 470,
+          "num_ground_truths": 336
+        },
+        "39": {
+          "ap": 0.0,
+          "num_predictions": 308,
+          "num_ground_truths": 146
+        },
+        "40": {
+          "ap": 0.0,
+          "num_predictions": 2079,
+          "num_ground_truths": 148
+        },
+        "41": {
+          "ap": 0.0,
+          "num_predictions": 390,
+          "num_ground_truths": 179
+        },
+        "42": {
+          "ap": 0.0,
+          "num_predictions": 1610,
+          "num_ground_truths": 269
+        },
+        "43": {
+          "ap": 0.0,
+          "num_predictions": 305,
+          "num_ground_truths": 225
+        },
+        "44": {
+          "ap": 0.0002483854936084847,
+          "num_predictions": 616,
+          "num_ground_truths": 1025
+        },
+        "46": {
+          "ap": 7.301935006913377e-05,
+          "num_predictions": 1466,
+          "num_ground_truths": 343
+        },
+        "47": {
+          "ap": 0.0,
+          "num_predictions": 1199,
+          "num_ground_truths": 899
+        },
+        "48": {
+          "ap": 0.0,
+          "num_predictions": 722,
+          "num_ground_truths": 215
+        },
+        "49": {
+          "ap": 0.0,
+          "num_predictions": 266,
+          "num_ground_truths": 326
+        },
+        "50": {
+          "ap": 0.0,
+          "num_predictions": 416,
+          "num_ground_truths": 253
+        },
+        "51": {
+          "ap": 0.030303020202023568,
+          "num_predictions": 858,
+          "num_ground_truths": 626
+        },
+        "52": {
+          "ap": 0.0,
+          "num_predictions": 618,
+          "num_ground_truths": 379
+        },
+        "53": {
+          "ap": 0.0,
+          "num_predictions": 204,
+          "num_ground_truths": 239
+        },
+        "54": {
+          "ap": 0.0011316484298573622,
+          "num_predictions": 393,
+          "num_ground_truths": 177
+        },
+        "55": {
+          "ap": 0.0003293807629699643,
+          "num_predictions": 628,
+          "num_ground_truths": 287
+        },
+        "56": {
+          "ap": 0.0,
+          "num_predictions": 630,
+          "num_ground_truths": 316
+        },
+        "57": {
+          "ap": 0.0,
+          "num_predictions": 3408,
+          "num_ground_truths": 371
+        },
+        "58": {
+          "ap": 0.0,
+          "num_predictions": 676,
+          "num_ground_truths": 127
+        },
+        "59": {
+          "ap": 0.0,
+          "num_predictions": 618,
+          "num_ground_truths": 285
+        },
+        "60": {
+          "ap": 0.0,
+          "num_predictions": 409,
+          "num_ground_truths": 338
+        },
+        "61": {
+          "ap": 0.00048810250087014914,
+          "num_predictions": 1864,
+          "num_ground_truths": 316
+        },
+        "62": {
+          "ap": 0.000678426046497499,
+          "num_predictions": 227,
+          "num_ground_truths": 1791
+        },
+        "63": {
+          "ap": 0.00027716186168271053,
+          "num_predictions": 1010,
+          "num_ground_truths": 261
+        },
+        "64": {
+          "ap": 0.00032123353564613913,
+          "num_predictions": 439,
+          "num_ground_truths": 343
+        },
+        "65": {
+          "ap": 0.0,
+          "num_predictions": 239,
+          "num_ground_truths": 163
+        },
+        "67": {
+          "ap": 0.00032010243165136787,
+          "num_predictions": 316,
+          "num_ground_truths": 697
+        },
+        "70": {
+          "ap": 0.0,
+          "num_predictions": 369,
+          "num_ground_truths": 179
+        },
+        "72": {
+          "ap": 0.0,
+          "num_predictions": 421,
+          "num_ground_truths": 288
+        },
+        "73": {
+          "ap": 0.0,
+          "num_predictions": 226,
+          "num_ground_truths": 231
+        },
+        "74": {
+          "ap": 0.0,
+          "num_predictions": 3141,
+          "num_ground_truths": 106
+        },
+        "75": {
+          "ap": 0.0,
+          "num_predictions": 412,
+          "num_ground_truths": 283
+        },
+        "76": {
+          "ap": 0.0,
+          "num_predictions": 535,
+          "num_ground_truths": 153
+        },
+        "77": {
+          "ap": 0.0,
+          "num_predictions": 81,
+          "num_ground_truths": 262
+        },
+        "78": {
+          "ap": 0.0,
+          "num_predictions": 396,
+          "num_ground_truths": 55
+        },
+        "79": {
+          "ap": 0.0,
+          "num_predictions": 22,
+          "num_ground_truths": 143
+        },
+        "80": {
+          "ap": 0.0,
+          "num_predictions": 120,
+          "num_ground_truths": 9
+        }
+      },
+      "num_classes_evaluated": 71
+    },
+    "per_class": {
+      "person": {
+        "predictions": 20475,
+        "ground_truths": 11004
+      },
+      "wine glass": {
+        "predictions": 1466,
+        "ground_truths": 343
+      },
+      "pizza": {
+        "predictions": 618,
+        "ground_truths": 285
+      },
+      "toilet": {
+        "predictions": 369,
+        "ground_truths": 179
+      },
+      "sandwich": {
+        "predictions": 393,
+        "ground_truths": 177
+      },
+      "class_45": {
+        "predictions": 560,
+        "ground_truths": 0
+      },
+      "surfboard": {
+        "predictions": 1610,
+        "ground_truths": 269
+      },
+      "bottle": {
+        "predictions": 616,
+        "ground_truths": 1025
+      },
+      "cake": {
+        "predictions": 1864,
+        "ground_truths": 316
+      },
+      "backpack": {
+        "predictions": 796,
+        "ground_truths": 371
+      },
+      "laptop": {
+        "predictions": 226,
+        "ground_truths": 231
+      },
+      "spoon": {
+        "predictions": 416,
+        "ground_truths": 253
+      },
+      "carrot": {
+        "predictions": 3408,
+        "ground_truths": 371
+      },
+      "cup": {
+        "predictions": 1199,
+        "ground_truths": 899
+      },
+      "baseball glove": {
+        "predictions": 2079,
+        "ground_truths": 148
+      },
+      "tv": {
+        "predictions": 421,
+        "ground_truths": 288
+      },
+      "class_69": {
+        "predictions": 98,
+        "ground_truths": 0
+      },
+      "traffic light": {
+        "predictions": 2145,
+        "ground_truths": 637
+      },
+      "class_29": {
+        "predictions": 461,
+        "ground_truths": 0
+      },
+      "giraffe": {
+        "predictions": 865,
+        "ground_truths": 232
+      },
+      "class_26": {
+        "predictions": 676,
+        "ground_truths": 0
+      },
+      "sports ball": {
+        "predictions": 337,
+        "ground_truths": 263
+      },
+      "parking meter": {
+        "predictions": 531,
+        "ground_truths": 60
+      },
+      "motorcycle": {
+        "predictions": 789,
+        "ground_truths": 371
+      },
+      "bicycle": {
+        "predictions": 385,
+        "ground_truths": 316
+      },
+      "car": {
+        "predictions": 3950,
+        "ground_truths": 1932
+      },
+      "truck": {
+        "predictions": 1287,
+        "ground_truths": 415
+      },
+      "chair": {
+        "predictions": 227,
+        "ground_truths": 1791
+      },
+      "class_68": {
+        "predictions": 739,
+        "ground_truths": 0
+      },
+      "couch": {
+        "predictions": 1010,
+        "ground_truths": 261
+      },
+      "kite": {
+        "predictions": 470,
+        "ground_truths": 336
+      },
+      "toaster": {
+        "predictions": 120,
+        "ground_truths": 9
+      },
+      "class_66": {
+        "predictions": 612,
+        "ground_truths": 0
+      },
+      "potted plant": {
+        "predictions": 439,
+        "ground_truths": 343
+      },
+      "mouse": {
+        "predictions": 3141,
+        "ground_truths": 106
+      },
+      "dining table": {
+        "predictions": 316,
+        "ground_truths": 697
+      },
+      "bed": {
+        "predictions": 239,
+        "ground_truths": 163
+      },
+      "remote": {
+        "predictions": 412,
+        "ground_truths": 283
+      },
+      "keyboard": {
+        "predictions": 535,
+        "ground_truths": 153
+      },
+      "hot dog": {
+        "predictions": 676,
+        "ground_truths": 127
+      },
+      "fork": {
+        "predictions": 722,
+        "ground_truths": 215
+      },
+      "airplane": {
+        "predictions": 236,
+        "ground_truths": 143
+      },
+      "zebra": {
+        "predictions": 327,
+        "ground_truths": 268
+      },
+      "cat": {
+        "predictions": 391,
+        "ground_truths": 202
+      },
+      "boat": {
+        "predictions": 1000,
+        "ground_truths": 430
+      },
+      "sheep": {
+        "predictions": 829,
+        "ground_truths": 361
+      },
+      "bus": {
+        "predictions": 424,
+        "ground_truths": 285
+      },
+      "bench": {
+        "predictions": 1002,
+        "ground_truths": 413
+      },
+      "horse": {
+        "predictions": 654,
+        "ground_truths": 273
+      },
+      "train": {
+        "predictions": 300,
+        "ground_truths": 190
+      },
+      "class_12": {
+        "predictions": 95,
+        "ground_truths": 0
+      },
+      "fire hydrant": {
+        "predictions": 133,
+        "ground_truths": 101
+      },
+      "bird": {
+        "predictions": 332,
+        "ground_truths": 440
+      },
+      "umbrella": {
+        "predictions": 575,
+        "ground_truths": 413
+      },
+      "cow": {
+        "predictions": 405,
+        "ground_truths": 380
+      },
+      "suitcase": {
+        "predictions": 527,
+        "ground_truths": 303
+      },
+      "class_30": {
+        "predictions": 137,
+        "ground_truths": 0
+      },
+      "elephant": {
+        "predictions": 82,
+        "ground_truths": 255
+      },
+      "bear": {
+        "predictions": 406,
+        "ground_truths": 71
+      },
+      "dog": {
+        "predictions": 342,
+        "ground_truths": 218
+      },
+      "handbag": {
+        "predictions": 556,
+        "ground_truths": 540
+      },
+      "snowboard": {
+        "predictions": 260,
+        "ground_truths": 69
+      },
+      "tie": {
+        "predictions": 132,
+        "ground_truths": 254
+      },
+      "orange": {
+        "predictions": 628,
+        "ground_truths": 287
+      },
+      "bowl": {
+        "predictions": 858,
+        "ground_truths": 626
+      },
+      "banana": {
+        "predictions": 618,
+        "ground_truths": 379
+      },
+      "knife": {
+        "predictions": 266,
+        "ground_truths": 326
+      },
+      "broccoli": {
+        "predictions": 630,
+        "ground_truths": 316
+      },
+      "skateboard": {
+        "predictions": 390,
+        "ground_truths": 179
+      },
+      "baseball bat": {
+        "predictions": 308,
+        "ground_truths": 146
+      },
+      "skis": {
+        "predictions": 246,
+        "ground_truths": 241
+      },
+      "cell phone": {
+        "predictions": 81,
+        "ground_truths": 262
+      },
+      "donut": {
+        "predictions": 409,
+        "ground_truths": 338
+      },
+      "frisbee": {
+        "predictions": 689,
+        "ground_truths": 115
+      },
+      "tennis racket": {
+        "predictions": 305,
+        "ground_truths": 225
+      },
+      "microwave": {
+        "predictions": 396,
+        "ground_truths": 55
+      },
+      "class_71": {
+        "predictions": 19,
+        "ground_truths": 0
+      },
+      "apple": {
+        "predictions": 204,
+        "ground_truths": 239
+      },
+      "oven": {
+        "predictions": 22,
+        "ground_truths": 143
+      },
+      "stop sign": {
+        "predictions": 75,
+        "ground_truths": 75
+      },
+      "sink": {
+        "predictions": 0,
+        "ground_truths": 225
+      },
+      "refrigerator": {
+        "predictions": 0,
+        "ground_truths": 126
+      },
+      "book": {
+        "predictions": 0,
+        "ground_truths": 1161
+      },
+      "vase": {
+        "predictions": 0,
+        "ground_truths": 277
+      },
+      "clock": {
+        "predictions": 0,
+        "ground_truths": 267
+      },
+      "toothbrush": {
+        "predictions": 0,
+        "ground_truths": 57
+      },
+      "teddy bear": {
+        "predictions": 0,
+        "ground_truths": 191
+      },
+      "scissors": {
+        "predictions": 0,
+        "ground_truths": 36
+      },
+      "hair drier": {
+        "predictions": 0,
+        "ground_truths": 11
+      }
+    },
+    "benchmark": {
+      "fps": 21.42152519295723,
+      "latency_ms": 46.68201684951782,
+      "std_ms": 5.57878666475981,
+      "min_ms": 39.28971290588379,
+      "max_ms": 75.1352310180664
+    }
+  },
+  "inference": {
+    "total_predictions": 72987,
+    "avg_inference_time_ms": 50.11402444839477,
+    "avg_predictions_per_image": 14.5974
+  },
+  "timestamp": "2025-11-10T13:30:34.022102"
+}

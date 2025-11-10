@@ -1,0 +1,89 @@
+version: '3.8'
+
+services:
+  rtdetr-eval:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rtdetr-evaluation:latest
+    container_name: rtdetr-eval
+
+    # GPU configuration for A100
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1  # Use 1 GPU
+              capabilities: [gpu]
+
+    # Share host network for easier access
+    network_mode: host
+
+    # Mount volumes
+    volumes:
+      # Mount current directory to /workspace
+      - .:/workspace
+      # Mount dataset directory (persistent)
+      - ./dataset:/workspace/dataset
+      # Mount pretrained weights (persistent)
+      - ./pretrained_weights:/workspace/pretrained_weights
+      # Mount outputs (persistent)
+      - ./outputs:/workspace/outputs
+      - ./outputs_universal:/workspace/outputs_universal
+
+    # Working directory
+    working_dir: /workspace
+
+    # Environment variables
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0
+      - PYTHONPATH=/workspace:/workspace/src
+
+    # Keep container running
+    stdin_open: true
+    tty: true
+
+    # Default command
+    command: /bin/bash
+
+# Optional: Jupyter notebook service
+  rtdetr-jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rtdetr-evaluation:latest
+    container_name: rtdetr-jupyter
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+    ports:
+      - "8888:8888"
+
+    volumes:
+      - .:/workspace
+      - ./dataset:/workspace/dataset
+      - ./pretrained_weights:/workspace/pretrained_weights
+      - ./outputs:/workspace/outputs
+      - ./outputs_universal:/workspace/outputs_universal
+
+    working_dir: /workspace
+
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0
+      - PYTHONPATH=/workspace:/workspace/src
+
+    command: >
+      bash -c "jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser
+      --allow-root --NotebookApp.token='' --NotebookApp.password=''"
+
+    profiles:
+      - jupyter  # Only start when explicitly requested
